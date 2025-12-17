@@ -1,0 +1,1 @@
+# installing python, venv and dbt core 

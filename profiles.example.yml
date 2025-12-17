@@ -1,0 +1,12 @@
+dbt_trainning:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      threads: 8
+      catalog: "{{ env_var('DEV_DATABRICKS_CATALOG') }}"
+      schema: "{{ env_var('DEV_SCHEMA_NAME') }}"
+      host: "{{ env_var('DEV_DATABRICKS_HOST') }}"
+      http_path: "{{ env_var('DEV_DATABRICKS_HTTP_PATH') }}"
+      token: "{{ env_var('DEV_DATABRICKS_TOKEN') }}"
+      ansi_mode: false
